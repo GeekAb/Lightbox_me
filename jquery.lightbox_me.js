@@ -58,7 +58,9 @@
             // set css of the overlay
             if (opts.showOverlay) {
                 setOverlayHeight(); // pulled this into a function because it is called on window resize.
-                $overlay.css({ position: 'absolute', width: '100%', top: 0, left: 0, right: 0, bottom: 0, zIndex: (opts.zIndex + 2), display: 'none' });
+
+                //Position changed so that it will cover the whole width of HTML not just visible part of website
+                $overlay.css({ position: 'fixed', width: '100%', top: 0, left: 0, right: 0, bottom: 0, zIndex: (opts.zIndex + 2), display: 'none' });
 				if (!$overlay.hasClass('lb_overlay_clear')){
                 	$overlay.css(opts.overlayCSS);
                 }
